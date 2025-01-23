@@ -39,6 +39,4 @@ Longitude: Longitude values corresponding to the satellite image.
 Latitude: Latitude values corresponding to the satellite image.
 NO2: The NO2 concentration at the respective coordinates.
 
-## 🖼️ Preview
 
-![Sih](img6.png)
