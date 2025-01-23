@@ -38,3 +38,7 @@ NO2 Data: The Excel file should have the following columns:
 Longitude: Longitude values corresponding to the satellite image.
 Latitude: Latitude values corresponding to the satellite image.
 NO2: The NO2 concentration at the respective coordinates.
+
+## 🖼️ Preview
+
+![Satellite-Image-NO2-Concentration-Mapping](img6.png)
