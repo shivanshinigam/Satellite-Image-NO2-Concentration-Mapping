@@ -41,4 +41,4 @@ NO2: The NO2 concentration at the respective coordinates.
 
 ## 🖼️ Preview
 
-![Satellite-Image-NO2-Concentration-Mapping](img6.png)
+![Sih](img6.png)
