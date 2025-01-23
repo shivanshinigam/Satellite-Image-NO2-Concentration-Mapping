@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image for NO₂ Analysis</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('shh.jpg') no-repeat center center fixed;
+            background-size:  1450px 750px; /* This will make the background cover the entire screen */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7); /* Solid color with transparency */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 25px rgba(84, 82, 82, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #ddd;
+            text-align: left;
+        }
+
+        input[type="file"],
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            background: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="file"]::-webkit-file-upload-button:hover {
+            background: #0056b3;
+        }
+
+        input[type="submit"] {
+            background: #28a745;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+
+        input[type="file"]:hover,
+        input[type="text"]:hover {
+            border-color: #bbb;
+        }
+        /* Back button */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="back-btn" onclick="window.location.href='http://127.0.0.1:5501/sih/index.html'">Back to Home</button>
+    <div class="container">
+        <h1>Upload Image for NO₂ Concentration Analysis</h1>
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <label for="file">Select image file:</label>
+            <input type="file" name="file" id="file" required>
+
+            <label for="place_name">Place Name:</label>
+            <input type="text" name="place_name" id="place_name" placeholder="Enter the place name" required>
+
+            <input type="submit" value="Upload and Analyze">
+        </form>
+    </div>
+</body>
+
+</html>

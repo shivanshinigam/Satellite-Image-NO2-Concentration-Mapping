@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #e9ecef;
+            color: #333;
+            background-image: url('shh.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #444;
+            
+            text-align: center;
+            margin: 80px 0 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #666;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 100px auto; /* Increased top margin to bring the container down */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 20px auto;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+         /* Back button */
+         .back-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">Back</button>
+    <div class="content">
+        <h1>Analysis Result</h1>
+        <p>Average NO₂ concentration at {{ place_name }} on {{ current_date }}: {{ average_no2 }} µg/m³</p>
+
+        <img src="{{ image_url }}" alt="NO₂ Concentration Chart">
+
+        <a href="{{ url_for('index') }}">Back to Upload</a>
+    </div>
+</body>
+</html>
