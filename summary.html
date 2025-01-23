@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Summary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4ea1c8, #8f94fb);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin: 60px auto;
+            max-width: 900px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            color: #4e54c8;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 1.2px;
+            position: relative;
+            animation: fadeInDown 1s ease-in-out forwards;
+        }
+
+        h2:after {
+            content: '';
+            width: 70px;
+            height: 5px;
+            background-color: #8f94fb;
+            display: block;
+            margin: 20px auto 0;
+            animation: growWidth 0.6s ease-in-out forwards;
+        }
+
+        p,
+        ul {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        ul {
+            padding-left: 40px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        p strong {
+            color: #4e54c8;
+
+        }
+
+        /* Floating shapes for decoration */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            animation: float 5s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .shape-1 {
+            width: 120px;
+            height: 120px;
+            top: -60px;
+            left: -60px;
+        }
+
+        .shape-2 {
+            width: 80px;
+            height: 80px;
+            bottom: -40px;
+            right: -40px;
+            animation-delay: 2s;
+        }
+
+        /* Back button */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+            transform: translateX(-50px);
+            opacity: 0;
+            animation: fadeInLeft 1s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        .back-btn:hover {
+            background: #ff4757;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes growWidth {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 70px;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
+    <section id="project-summary">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="container">
+            <h2>Project Summary</h2>
+            <p><strong>Title:</strong> AeroSpectra</p>
+            <p><strong>Objective:</strong> The project aims to develop an AI/ML-powered platform that generates fine spatial resolution air quality maps, specifically focusing on NO₂ (Nitrogen Dioxide) concentrations. The platform will utilize satellite data, process it to account for cloudy conditions, and validate results using independent data sources.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Data Processing: Integrates satellite data with machine learning algorithms to create detailed NO₂ concentration maps.</li>
+                <li>Cloud Handling: Implements techniques to estimate NO₂ levels accurately even under cloudy conditions.</li>
+                <li>User Interaction: Allows users to search for locations, view real-time NO₂ concentrations, and interact with detailed visualizations on a map.</li>
+                <li>Real-Time Data Integration: Provides live updates of NO₂ concentrations, enhancing situational awareness.</li>
+                <li>Visualization: Displays the processed data in an intuitive, user-friendly manner, using interactive maps and charts.</li>
+            </ul>
+            <p><strong>Target Users:</strong> Researchers, government bodies, and environmental agencies who require precise air quality data for analysis and decision-making.</p>
+            <p><strong>Technologies Used:</strong></p>
+            <ul>
+                <li>Front-End: HTML, CSS, JavaScript (React.js)</li>
+                <li>Back-End: Python (Flask), Machine Learning Libraries (e.g., Scikit-learn, TensorFlow)</li>
+                <li>Mapping: Leaflet.js for interactive maps, Folium for Python-based map generation.</li>
+                <li>Data Sources: Satellite data, real-time APIs for live NO₂ concentration.</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
