@@ -29,7 +29,7 @@ Latitude: Latitude values.
 NO2: NO2 concentration values.
 The app processes the data and generates a color-coded map, showing different NO2 levels on the image.
 View the processed image with overlays.
-Optionally, download the processed image for further analysis or sharing.
+
 
 
 📂 File Formats
@@ -38,5 +38,12 @@ NO2 Data: The Excel file should have the following columns:
 Longitude: Longitude values corresponding to the satellite image.
 Latitude: Latitude values corresponding to the satellite image.
 NO2: The NO2 concentration at the respective coordinates.
+
+![Uploading sih1.png…]()
+<img width="1680" alt="Screenshot 2025-01-23 at 9 26 09 PM" src="https://github.com/user-attachments/assets/77c3427f-ce87-4bf9-8cac-1f2eacb05d52" />
+<img width="1680" alt="Screenshot 2025-01-23 at 9 22 05 PM" src="https://github.com/user-attachments/assets/78e7175b-0b82-4f8c-a8a1-111a80de5be5" />
+<img width="1680" alt="sih1" src="https://github.com/user-attachments/assets/363d18e1-ef63-4e78-96cb-15cbcc8953b7" />
+
+
 
 
